@@ -139,7 +139,7 @@ gsap.from("#page2-left h3, #page2-right h3",{
         scroller:"#main",
         start:"top 50%",
         end:"top 40%",
-        markers: true,
+        // markers: true,
         scrub: 2
     }
 })
