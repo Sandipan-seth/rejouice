@@ -79,6 +79,8 @@ function swipper(){
 }
 swipper()
 
+
+
 function loading(){
 
     var tl= gsap.timeline()
@@ -115,34 +117,45 @@ function loading(){
 }
 loading()
 
-gsap.from("#page2-bottom h2",{
-    opacity:0,
-    y:50,
-    stagger:0.2,
-    duration:0.5,
-    scrollTrigger:{
-        trigger:"#page2",
-        scroller:"#main",
-        start:"top 50%",
-        end:"top 40%",
-        markers: true,
-        scrub: 2
-    }
-})
-gsap.from("#page2-left h3, #page2-right h3",{
-    opacity:0,
-    y:50,
-    stagger:0.2,
-    duration:0.5,
-    scrollTrigger:{
-        trigger:"#page2",
-        scroller:"#main",
-        start:"top 50%",
-        end:"top 40%",
-        // markers: true,
-        scrub: 2
-    }
-})
+
+
+function page2Animation(){
+    gsap.from("#page2-bottom h2, #page2-left, #page2-right, #page2-top",{
+        opacity:0,
+        y:50,
+        duration:1,
+        stagger:0.3,
+        scrollTrigger:{
+            trigger:"#page2",
+            start:"top 50%",
+            end:"top 0",
+            scroller:"body", 
+            // markers: true,
+            scrub:3
+        },
+    })
+}
+page2Animation()
+
+
+
+function page3Animation(){
+    gsap.from("#page3-top h2",{
+        opacity:0,
+        y:50,
+        duration:1,
+        stagger:0.3,
+        scrollTrigger:{
+            trigger:"#page3",
+            start:"top 50%",
+            end:"top 0",
+            scroller:"body", 
+            // markers: true,
+            scrub:3
+        },
+    })
+}
+page3Animation()
 
 
 function cursorEvent2() {

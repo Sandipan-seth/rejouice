@@ -21,6 +21,11 @@ html,body{
     width: 100%;
 }
 
+::selection{
+    background-color: rgba(255, 68, 0, 0.444);
+    color: yellow;
+}
+
 body::-webkit-scrollbar{
     display: none;
 }
@@ -35,7 +40,10 @@ body::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    pointer-events: none;
 }
+
+
 
 #loader h3{
     color: white;
