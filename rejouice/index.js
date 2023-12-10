@@ -38,9 +38,7 @@ ScrollTrigger.refresh();
     
 
 }
-
-smoothScroll()
-
+smoothScroll();
 
 function cursorEvent() {
     var cursor = document.querySelector("#cursor");
@@ -71,7 +69,6 @@ function cursorEvent() {
 }
 cursorEvent();
 
-
 function swipper(){
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -83,9 +80,7 @@ function swipper(){
           },
       });
 }
-swipper()
-
-
+swipper();
 
 function loading(){
 
@@ -123,9 +118,7 @@ function loading(){
         stagger:0.1
     })
 }
-loading()
-
-
+loading();
 
 function page2Animation(){
     gsap.from("#page2-bottom h2, #page2-left, #page2-right, #page2-top",{
@@ -144,9 +137,7 @@ function page2Animation(){
         },
     })
 }
-page2Animation()
-
-
+page2Animation();
 
 function page3Animation(){
     gsap.from("#page3-top h2",{
@@ -165,8 +156,7 @@ function page3Animation(){
         },
     })
 }
-page3Animation()
-
+page3Animation();
 
 function cursorEvent2() {
     var cursor2 = document.querySelector("#cursor2");
@@ -197,3 +187,63 @@ function cursorEvent2() {
 
 }
 cursorEvent2();
+
+function faketextAnimation(){
+    gsap.from("#fake-text, #text",{
+        opacity:0,
+        y:50,
+        duration:1,
+        stagger:0.1,
+        scrollTrigger:{
+            trigger:"#page4-top",
+            start:"top 70%",
+            end:"top 0",
+            scroller:"#main", 
+            // markers: true,
+            // pin:true,
+            scrub:3
+        },
+    })
+}
+faketextAnimation();
+
+function scrollNumber(){
+    gsap.to("#scroll-number",{
+        y:-650,
+        duration:0.5,
+        scrollTrigger:{
+            scroller:"#main",
+            trigger:"#seats",
+            start:"top 70%",
+            end:"50% top",
+            // markers: true,
+        }
+    })
+}
+scrollNumber();
+
+function menuOpening(){
+    var navRight = document.querySelector("#navRight");
+    var menu = document.querySelector("#menu");
+    
+    navRight.addEventListener("click",()=>{
+        gsap.to("#menu",{
+            opacity:1,
+            y:0,
+            duration:0.3
+        })
+    })
+}
+menuOpening();
+
+function menuClosing(){
+    var close= document.querySelector("#menuNavRight");
+    close.addEventListener("click",()=>{
+        gsap.to("#menu",{
+            opacity:0,
+            y:-1000,
+            duration:1
+        })
+    })
+}
+menuClosing();

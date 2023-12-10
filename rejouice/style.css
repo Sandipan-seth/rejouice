@@ -51,6 +51,166 @@ body::-webkit-scrollbar{
     font-weight: 100;
 }
 
+#menu{
+    /* display: none; */
+    min-height: 50vh;
+    width: 100%;
+    background-color: #FF5F38;
+    position: absolute;
+    z-index: 999999;
+    transform: translateY(-100vh);
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 10vh 5vh 10vh;
+}
+
+.wrapper{
+    /* border: 1px solid white; */
+    width: 50%;
+    margin-right: 7vw;
+}
+
+.wrapper h4{
+    font-weight: 100;
+}
+
+#menuNav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+#menuNavLeft{
+    text-transform: lowercase;
+}
+
+#menuNavRight{
+    /* background-color: rebeccapurple; */
+    transition: all ease 0.5s;
+}
+
+#menuNavRight:hover{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+#menuNav h3{
+    font-size: 3vh;
+    font-weight: 200;
+    font-family: rj;
+}
+
+#menuMid{
+    width:100%;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: space-between; */
+}
+
+#menuVideo{
+    /* border: 1px solid white; */
+    /* width: 50%; */
+    width: 30%;
+    /* height: 100%; */
+
+}
+
+.home{
+    /* background-color: green; */
+    height: 8vh;
+    overflow-y: hidden;
+    
+}
+
+.work{
+    /* background-color: green; */
+    height: 8vh;
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: end; */
+    overflow-y: hidden;
+    
+}
+
+.home>div{
+    /* border: 1px solid white; */
+    width: fit-content;
+    transition: all ease-in-out 0.3s;
+}
+
+.work>div{
+    /* border: 1px solid white; */
+    width: fit-content;
+    transition: all ease-in-out 0.3s;
+}
+
+.home>div:hover{
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.work>div:hover{
+    cursor: pointer;
+    transform: translateY(50%);
+}
+
+#menuOpt{
+    /* border: 1px solid white; */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#menuOpt div{
+    font-size: 7vh;
+    font-weight: 500;
+    /* margin-bottom: 1vh; */
+}
+
+#menuVideo video{
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    cursor: pointer;
+    /* height: 500px; */
+}
+
+#videoTag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#videoTag h3{
+    font-weight: 100;
+    font-family: nb;
+}
+
+#NavButton{
+    border: 1px solid black;
+    margin-block: 1vw;
+    border-radius: 5px;
+    padding: 1vw;
+    width: fit-content;
+}
+
+#NavButton h4{
+    font-size: 1vw;
+    font-family: nb;
+    font-weight: 100;
+}
+
+#navRight:hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
 #cursor{
     scale: 0;
     opacity: 0;
@@ -177,7 +337,7 @@ nav h3{
     font-family: nb;
     font-weight: 100;
 }
-#mid{
+.mid{
     padding: 0 6vw;
 }
 
@@ -198,9 +358,11 @@ nav h3{
 }
 
 #page3-top h4{
+    line-height: 0;
     margin-bottom: 1vw;
     font-size: 1vw;
     font-weight: 500;
+    font-family: rj;
 }
 
 #page3-top h4 span{
@@ -213,7 +375,7 @@ nav h3{
 }
 
 #page3-top h2{
-    font-size: 3vw;
+    font-size: 4vw;
     font-weight: 500;
 }
 
@@ -252,6 +414,81 @@ nav h3{
 
 #page3-elements .box:hover img{
     opacity: 0;
+}
+
+#page4-top{
+    width: 100%;
+    background-color: beige;
+    padding: 3vw;
+}
+
+#fake-text{
+
+    padding: 1vw 0vw;
+    border-bottom: 1px solid black;
+    margin-bottom: 1vw;
+}
+
+#fake-text h4{
+    font-weight: 100;
+    font-size: 2vw;
+    line-height: 2vw;
+    font-family: nb;
+}
+
+#text{
+    padding: 0 3.5vw;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#text>h2{
+    font-size: 4vw;
+    font-family: nb;
+    font-weight: 100;
+}
+
+#seats{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#seats > h3{
+    color: white;
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-family: rj;
+}
+
+#seat-top{
+    font-weight:100;
+    font-family: rj;
+    height: 11vh;
+    width: fit-content;
+    /* border: 1px solid red; */
+    overflow-y: hidden;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#scroll-number{
+    margin-right: 0.3vw;
+    /* border: 1px solid red; */
+}
+
+#seat-top h3{
+    
+    font-size: 4vw;
+    color: white;
+    letter-spacing: 3px;
+    padding: 4px 0;
 }
 
 
